@@ -7,14 +7,14 @@ const Dashboard = () => {
         <div className="w-4/5 mx-auto min-h-[70vh] bg-indigo-50">
           <div className="flex lg:flex-row flex-col justify-center lg:items-start items-center">
             <div className=" lg:text-end text-center lg:w-1/5 py-3 px-1 mt-4">
-              <ul>
+              <ul className='font-bold'>
                 <li>
                   <NavLink
                     to={"/dashboard/addproduct"}
                     className={({ isActive }) =>
                       isActive
-                        ? "shadow-xl p-1 block border-r-4 border-primary bg-indigo-300 rounded-r-sm"
-                        : " p-1 block"
+                        ? "shadow-xl p-1 block border-r-4 my-1 border-primary bg-indigo-300 rounded-r-sm"
+                        : " p-1 block bg-indigo-100 my-1"
                     }
                   >
                     Add Product
@@ -25,8 +25,8 @@ const Dashboard = () => {
                     to={"/dashboard/editproduct"}
                     className={({ isActive }) =>
                       isActive
-                        ? "shadow-xl p-1 block border-r-4 border-primary bg-indigo-300 rounded-r-sm"
-                        : " p-1 block"
+                        ? "shadow-xl p-1 block border-r-4 my-1 border-primary bg-indigo-300 rounded-r-sm"
+                        : " p-1 block bg-indigo-100 my-1"
                     }
                   >
                     Edit Product
@@ -37,8 +37,8 @@ const Dashboard = () => {
                     to={"/dashboard/allseller"}
                     className={({ isActive }) =>
                       isActive
-                        ? "shadow-xl p-1 block border-r-4 border-primary bg-indigo-300 rounded-r-sm"
-                        : " p-1 block"
+                        ? "shadow-xl p-1 block border-r-4 my-1 border-primary bg-indigo-300 rounded-r-sm"
+                        : " p-1 block bg-indigo-100 my-1"
                     }
                   >
                     All Seller
@@ -49,8 +49,8 @@ const Dashboard = () => {
                     to={"/dashboard/alluser"}
                     className={({ isActive }) =>
                       isActive
-                        ? "shadow-xl p-1 block border-r-4 border-primary bg-indigo-300 rounded-r-sm"
-                        : " p-1 block"
+                        ? "shadow-xl p-1 block border-r-4 my-1 border-primary bg-indigo-300 rounded-r-sm"
+                        : " p-1 block bg-indigo-100 my-1"
                     }
                   >
                     All User

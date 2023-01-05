@@ -39,7 +39,7 @@ const AddProduct = () => {
       <h1 className="m-4 text-xl font-bold text-slate-400">Add Your Product</h1>
       <form onSubmit={handleproduct}>
         <div className="flex lg:flex-row flex-col justify-between items-center mb-2 ">
-          <p className=" bg-slate-300 lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
+          <p className=" lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
             Product Name
           </p>
           <input
@@ -49,7 +49,7 @@ const AddProduct = () => {
           />
         </div>
         <div className="flex lg:flex-row flex-col justify-between items-center mb-2 ">
-          <p className=" bg-slate-300 lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
+          <p className=" lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
             Add Selling Price
           </p>
           <input
@@ -59,7 +59,7 @@ const AddProduct = () => {
           />
         </div>
         <div className="flex lg:flex-row flex-col justify-between items-center mb-2 ">
-          <p className=" bg-slate-300 lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
+          <p className=" lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
             Add Image Link
           </p>
           <input
@@ -69,7 +69,7 @@ const AddProduct = () => {
           />
         </div>
         <div className="flex lg:flex-row flex-col justify-between items-start mb-2 ">
-          <p className=" bg-slate-300 lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
+          <p className=" lg:w-[200px] w-full py-1 px-2  lg:text-end rounded-l">
             Details
           </p>
           <textarea
