@@ -4,37 +4,37 @@ import { Link } from "react-router-dom";
 
 const EditProduct = () => {
   const [editproduct, setEditProduct] = useState();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
-    fetch(`http://localhost:5000/productview`)
+    setLoading(true);
+    fetch(`https://dhimans-server.vercel.app/productview`)
       .then((res) => res.json())
       .then((data) => {
         setEditProduct(data);
-        setLoading(false)
+        setLoading(false);
       });
   }, []);
 
-  const handledelete = (e)=>{
-    fetch(`http://localhost:5000/productview/delete?id=${e}`,{
-      method:'DELETE',
-      headers:{
-        'Content-Type':'application/json'
+  const handledelete = (e) => {
+    fetch(`https://dhimans-server.vercel.app/productview/delete?id=${e}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
       },
     })
-    .then(res => res.json())
-    .then(data => {
-      setLoading(true);
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(true);
 
-      fetch(`http://localhost:5000/productview`)
-        .then((res) => res.json())
-        .then((data) => {
-          setEditProduct(data);
-          setLoading(false);
-        });
-    })
-  }
+        fetch(`https://dhimans-server.vercel.app/productview`)
+          .then((res) => res.json())
+          .then((data) => {
+            setEditProduct(data);
+            setLoading(false);
+          });
+      });
+  };
 
   return (
     <div className="mt-4">

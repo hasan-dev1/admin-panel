@@ -1,14 +1,14 @@
-import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-import MainLayout from '../MainLayout/MainLayout';
-import Dashboard from '../Pages/Dashboard/Dashboard';
-import AddProduct from '../Pages/Dashboard/DashChild/AddProduct';
-import AllSeller from '../Pages/Dashboard/DashChild/AllSeller';
-import AllUser from '../Pages/Dashboard/DashChild/AllUser';
-import EditProduct from '../Pages/Dashboard/DashChild/EditProduct';
-import ProductCorrection from '../Pages/Dashboard/DashChild/ProductCorrection';
-import ProductEditpage from '../Pages/Dashboard/DashChild/ProductCorrection';
-import Home from '../Pages/Home/Home';
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
+import MainLayout from "../MainLayout/MainLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import AddProduct from "../Pages/Dashboard/DashChild/AddProduct";
+import AllSeller from "../Pages/Dashboard/DashChild/AllSeller";
+import AllUser from "../Pages/Dashboard/DashChild/AllUser";
+import EditProduct from "../Pages/Dashboard/DashChild/EditProduct";
+import ProductCorrection from "../Pages/Dashboard/DashChild/ProductCorrection";
+import ProductEditpage from "../Pages/Dashboard/DashChild/ProductCorrection";
+import Home from "../Pages/Home/Home";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +45,10 @@ const router = createBrowserRouter([
           },
           {
             path: "/dashboard/productcorrection/:id",
-            loader: ({ params }) => fetch(`http://localhost:5000/productview/one?id=${params.id}`),
+            loader: ({ params }) =>
+              fetch(
+                `https://dhimans-server.vercel.app/productview/one?id=${params.id}`
+              ),
             element: <ProductCorrection></ProductCorrection>,
           },
         ],
